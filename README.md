@@ -152,6 +152,16 @@ public class GestorJuegos {
         return stockActual;
     }
 
+     /**
+     * Método que vende una cantidad de juegos de un código específico. Devuelve la cantidad vendida o un código de error en caso de que no se pueda realizar la venta.
+     * Códigos de error:
+     * 0: Error de formato en el código o cantidad no válida
+     * -1: El juego no existe
+     * -2: No hay suficiente stock para vender la cantidad solicitada
+     * @param codigo El código del juego a vender
+     * @param cantidad La cantidad de juegos a vender
+     * @return La cantidad de juegos vendidos o un código de error en caso de que no se pueda realizar la venta
+     */
     public int venderJuego(String codigo, int cantidad) {
         try {
             // Comprobamos el formato del código: ABC123
@@ -219,15 +229,3 @@ Deberás crear un documento donde des respuesta a los siguientes apartados:
     - Al tratarse de pruebas funcionales no es necesario conocer los detalles del código, aunque dispones de él en el código fuente.
 
 3. Completa la clase `GestionJuegosTest` del tipo Caso de prueba JUnit en Intellij IDEA, que nos permita pasar las pruebas unitarias de caja blanca del método `registrarLoteJuegos`. Los casos de prueba ya los habrás obtenido en el primer apartado del ejercicio.
-
-## Entrega
-
-Deberás crear un documento en el que incluyas:
-
-- El análisis completo de caja blanca del método `registrarLoteJuegos`
-- El análisis de caja negra del método `venderJuego`
-- Capturas de pantalla mostrando la ejecución exitosa de las pruebas en Intellij IDEA
-
-Ten en cuenta la sección [UD5_5](https://github.com/danielmartinan/entornos_desarrollo_2024-25/blob/main-public/UD5_diseno_realizacion_pruebas/apuntes/UD5_5_documentacion_pruebas.md) relacionada con la documentación de pruebas para crear dicho documento.
-
-Deberás entregar también el proyecto de Intellij IDEA con la clase de test creada, y crear un archivo comprimido junto al documento con el nombre **apellidos_nombre_ed05.zip**.
